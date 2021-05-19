@@ -13,7 +13,7 @@ pipeline {
          }
          stage('Deploy - Staging') {
              when {
-                 branch 'master'
+                 branch 'TEST-1-blah'
              }
              steps {
                  echo 'Deploying to Staging from master...'
