@@ -7,6 +7,7 @@ pipeline {
              }
              post {
                  always {
+                     junit 'test.xml'
                      jiraSendBuildInfo site: 'mboudreau.atlassian.net'
                  }
              }
