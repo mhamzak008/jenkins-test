@@ -11,6 +11,7 @@ pipeline {
                  }
              }
          }
+          
          stage('Deploy - Staging') {
              when {
                  branch 'master'
@@ -24,6 +25,7 @@ pipeline {
                  }
              }
          }
+          
          stage('Deploy - Production') {
             when {
                 branch 'master'
