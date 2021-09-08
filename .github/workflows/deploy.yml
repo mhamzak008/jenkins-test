@@ -20,7 +20,7 @@ jobs:
         with:
           token: "${{ github.token }}"
           target_url: http://my-cool-app.com
-          environment: Staging
+          environment: some-staging-env
       - name: Running staging deployment
         run: |
           echo Deploying to staging...
@@ -41,7 +41,7 @@ jobs:
         with:
           token: "${{ github.token }}"
           target_url: http://my-cool-app.com
-          environment: Production
+          environment: 1111:prod_env
       - name: Running production deployment
         run: |
           echo Deploying to production...
