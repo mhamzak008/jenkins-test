@@ -13,8 +13,6 @@ pipeline {
              }
          }
           
-          
-          
          stage('Deploy - Staging') {
              when {
                  branch 'TEST-1-blah'
