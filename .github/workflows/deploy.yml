@@ -103,3 +103,25 @@ jobs:
           target_url: http://my-cool-app.com
           state: "success"
           deployment_id: ${{ steps.deployment_prod.outputs.deployment_id }}
+  deploy-to-prod-normal:
+    runs-on: ubuntu-18.04
+    name: Deploy to Normal Production
+    if: ${{ github.ref == 'refs/heads/master' }}
+    steps: 
+      - uses: chrnorm/deployment-action@releases/v1
+        name: Create prod deployment
+        id: deployment_prod
+        with:
+          token: "${{ github.token }}"
+          target_url: http://my-cool-app.com
+          environment: prod-normal
+      - name: Running production deployment
+        run: |
+          echo Deploying to production...
+      - uses: chrnorm/deployment-status@releases/v1
+        name: Update prod deployment
+        with:
+          token: "${{ github.token }}"
+          target_url: http://my-cool-app.com
+          state: "success"
+          deployment_id: ${{ steps.deployment_prod.outputs.deployment_id }}
