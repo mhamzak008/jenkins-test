@@ -6,7 +6,6 @@ pipeline {
              steps {
                  echo 'Building...'
              }
-              
              post {
                  always {
                      junit 'test.xml'
