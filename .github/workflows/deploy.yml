@@ -81,6 +81,7 @@ jobs:
           target_url: http://my-cool-app.com
           state: "success"
           deployment_id: ${{ steps.deployment_staging.outputs.deployment_id }}
+          
   deploy-to-prod:
     runs-on: ubuntu-18.04
     name: Deploy to Production
@@ -96,6 +97,7 @@ jobs:
       - name: Running production deployment
         run: |
           echo Deploying to production...
+          sleep 10
       - uses: chrnorm/deployment-status@releases/v1
         name: Update prod deployment
         with:
