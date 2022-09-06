@@ -25,8 +25,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
-          sleep 60s
+          echo test, and deploy your project
           
   deploy-to-dev:
     runs-on: ubuntu-18.04
