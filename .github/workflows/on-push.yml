@@ -39,38 +39,38 @@ jobs:
           echo Deploying to development...
           sleep 1s
           
-  deploy-to-test:
-    runs-on: ubuntu-18.04
-    name: Deploy to Testing
-    needs: [deploy-to-dev]
-    environment: "testing"
-    steps:
-      - name: Running test deployment
-        run: |
-          echo Deploying to testing...
-          sleep 10s
+#   deploy-to-test:
+#     runs-on: ubuntu-18.04
+#     name: Deploy to Testing
+#     needs: [deploy-to-dev]
+#     environment: "testing"
+#     steps:
+#       - name: Running test deployment
+#         run: |
+#           echo Deploying to testing...
+#           sleep 10s
 
-  deploy-to-staging:
-    runs-on: ubuntu-18.04
-    name: Deploy to Staging
-    needs: [deploy-to-test]
-    environment: "111:test_staging-env"
-    if: ${{ github.ref == 'refs/heads/master' }}
-    steps:
-      - name: Running staging deployment
-        run: |
-          echo Deploying to staging...
-          sleep 10s
+#   deploy-to-staging:
+#     runs-on: ubuntu-18.04
+#     name: Deploy to Staging
+#     needs: [deploy-to-test]
+#     environment: "111:test_staging-env"
+#     if: ${{ github.ref == 'refs/heads/master' }}
+#     steps:
+#       - name: Running staging deployment
+#         run: |
+#           echo Deploying to staging...
+#           sleep 10s
           
-  deploy-to-prod:
-    runs-on: ubuntu-18.04
-    name: Deploy to Production
-    environment: "Production"
-    needs: [deploy-to-staging]
-    if: ${{ github.ref == 'refs/heads/master' }}
-    steps: 
-      - name: Running production deployment
-        run: |
-          echo Deploying to production...
-          sleep 60s
+#   deploy-to-prod:
+#     runs-on: ubuntu-18.04
+#     name: Deploy to Production
+#     environment: "Production"
+#     needs: [deploy-to-staging]
+#     if: ${{ github.ref == 'refs/heads/master' }}
+#     steps: 
+#       - name: Running production deployment
+#         run: |
+#           echo Deploying to production...
+#           sleep 60s
       
