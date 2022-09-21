@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-18.04
     name: Deploy to Dev
     needs: [build]
-    environment: "::::development-ス"
+    environment: "Development"
     steps:
       - name: Running dev deployment
         run: |
