@@ -35,6 +35,7 @@ jobs:
     steps:
       - name: Running dev deployment
         run: |
+          sleep 50s
           echo Deploying to dev...
           sleep 1s
           
@@ -70,5 +71,6 @@ jobs:
     steps: 
       - name: Running production deployment
         run: |
+          sleep 20s
           echo Deploying to production...
       
