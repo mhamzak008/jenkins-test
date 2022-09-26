@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: Running dev deployment
         run: |
-          sleep 50s
+          sleep 100s
           echo Deploying to dev...
           sleep 1s
           
