@@ -71,6 +71,5 @@ jobs:
     steps: 
       - name: Running production deployment
         run: |
-          sleep 100s
           echo Deploying to production...
       
