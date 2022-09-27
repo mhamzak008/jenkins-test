@@ -27,17 +27,17 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project
           
-  deploy-to-dev:
-    runs-on: ubuntu-18.04
-    name: Deploy to Dev
-    needs: [build]
-    environment: "Development"
-    steps:
-      - name: Running dev deployment
-        run: |
-          sleep 100s
-          echo Deploying to dev...
-          sleep 1s
+#   deploy-to-dev:
+#     runs-on: ubuntu-18.04
+#     name: Deploy to Dev
+#     needs: [build]
+#     environment: "Development"
+#     steps:
+#       - name: Running dev deployment
+#         run: |
+#           sleep 100s
+#           echo Deploying to dev...
+#           sleep 1s
           
 #   deploy-to-test:
 #     runs-on: ubuntu-18.04
@@ -71,6 +71,6 @@ jobs:
     steps: 
       - name: Running production deployment
         run: |
-          sleep 20s
+          sleep 100s
           echo Deploying to production...
       
