@@ -27,17 +27,21 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project
           
-#   deploy-to-dev:
-#     runs-on: ubuntu-18.04
-#     name: Deploy to Dev
-#     needs: [build]
-#     environment: "Development"
-#     steps:
-#       - name: Running dev deployment
-#         run: |
-#           sleep 100s
-#           echo Deploying to dev...
-#           sleep 1s
+  deploy-to-dev:
+    runs-on: ubuntu-18.04
+    name: Deploy to Dev
+    needs: [build]
+    environment: "Development"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: 17
+          distribution: 'adopt'
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
           
 #   deploy-to-test:
 #     runs-on: ubuntu-18.04
