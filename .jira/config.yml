@@ -2,3 +2,4 @@ deployments:
   services:
     ids:
     - b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzIwM2VkMWE0LTE0MmEtNDE0Yy1hYjY4LTA1OGMzMDBkODAxMS8xMDk0MDYwNi02YTY5LTExZWQtYTk5ZC0wYWJlM2Y0YTY2MDE=
+    - test
