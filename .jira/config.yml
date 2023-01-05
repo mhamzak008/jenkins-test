@@ -2,5 +2,7 @@ deployments:
   services:
     checkGatingStatus:
       environmentId: Development
+      sleep: 60
+      retry: 5
     ids:
     - b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzYwYWEzZjg2LTk3YTAtNDY4YS05OTQzLTIzNjZmMjFkOTk0Yy8wNGM3YmY2OC0zOThlLTExZWQtYmE4Ny0wZTNlN2EyMWE5MTE=
