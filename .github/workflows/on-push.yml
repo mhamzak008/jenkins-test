@@ -28,7 +28,7 @@ jobs:
           echo test, and deploy your project
           
   deploy-to-dev:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     name: Deploy to Dev
     needs: [build]
     environment: "Development"
@@ -67,7 +67,7 @@ jobs:
 #           sleep 10s
           
   deploy-to-prod:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     name: Deploy to Production
     environment: "Production"
     needs: [build]
