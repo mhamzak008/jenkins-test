@@ -66,14 +66,14 @@ jobs:
 #           echo Deploying to staging...
 #           sleep 10s
           
-  deploy-to-prod:
-    runs-on: ubuntu-latest
-    name: Deploy to Production
-    environment: "Production"
-    needs: [build]
-    if: ${{ github.ref == 'refs/heads/master' }}
-    steps: 
-      - name: Running production deployment
-        run: |
-          echo Deploying to production...
+  # deploy-to-prod:
+  #   runs-on: ubuntu-latest
+  #   name: Deploy to Production
+  #   environment: "Production"
+  #   needs: [build]
+  #   if: ${{ github.ref == 'refs/heads/master' }}
+  #   steps: 
+  #     - name: Running production deployment
+  #       run: |
+  #         echo Deploying to production...
       
