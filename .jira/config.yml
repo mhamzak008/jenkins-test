@@ -4,8 +4,8 @@ deployments:
     retry: 10
     sleep: 30
     environments: 
-    - development
-    - production
+    - Development
+    - Production
   services:
     ids:
     - b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzhiZjE1N2E5LTA2NzgtNDI0YS1iYjMwLTE3NjU3OTUyYjVkMy8zNDY0MjI0Mi1hZTFlLTExZWUtYTNiYi0wZTNlN2EyMWE5MTE=
