@@ -73,12 +73,9 @@ jobs:
     needs: [build]
     if: ${{ github.ref == 'refs/heads/master' }}
     steps: 
-      - uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
       - name: Running sleep
         run: |
-          sleep 30s
+          sleep 45s
       - name: Running production deployment
         run: |
           echo Deploying to production...
