@@ -43,16 +43,16 @@ jobs:
         with:
           arguments: build
           
-#   deploy-to-test:
-#     runs-on: ubuntu-18.04
-#     name: Deploy to Testing
-#     needs: [deploy-to-dev]
-#     environment: "testing"
-#     steps:
-#       - name: Running test deployment
-#         run: |
-#           echo Deploying to testing...
-#           sleep 10s
+  deploy-to-test:
+    runs-on: ubuntu-18.04
+    name: Deploy to Testing
+    needs: [build]
+    environment: "::::development-ス"
+    steps:
+      - name: Running test deployment
+        run: |
+          echo Deploying to testing...
+          sleep 10s
 
 #   deploy-to-staging:
 #     runs-on: ubuntu-18.04
