@@ -6,6 +6,7 @@ deployments:
     environments: 
     - Development
     - Production
+    - ::::development-ス
   services:
     ids:
     - b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzIwM2VkMWE0LTE0MmEtNDE0Yy1hYjY4LTA1OGMzMDBkODAxMS8zY2M3Njc1OC1iYzFjLTExZWUtYjY3ZC0wYWJlM2Y0YTY2MDE=
