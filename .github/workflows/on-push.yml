@@ -43,28 +43,28 @@ jobs:
         with:
           arguments: build
           
-  deploy-to-test:
-    runs-on: ubuntu-18.04
-    name: Deploy to Testing
-    needs: [build]
-    environment: "::::development-ス"
-    steps:
-      - name: Running test deployment
-        run: |
-          echo Deploying to testing...
-          sleep 10s
+  # deploy-to-test:
+  #   runs-on: ubuntu-18.04
+  #   name: Deploy to Testing
+  #   needs: [build]
+  #   environment: "::::development-ス"
+  #   steps:
+  #     - name: Running test deployment
+  #       run: |
+  #         echo Deploying to testing...
+  #         sleep 10s
 
-  deploy-to-staging:
-    runs-on: ubuntu-18.04
-    name: Deploy to Staging
-    needs: [build]
-    environment: "111:test_staging-env"
-    if: ${{ github.ref == 'refs/heads/master' }}
-    steps:
-      - name: Running staging deployment
-        run: |
-          echo Deploying to staging...
-          sleep 10s
+  # deploy-to-staging:
+  #   runs-on: ubuntu-18.04
+  #   name: Deploy to Staging
+  #   needs: [build]
+  #   environment: "111:test_staging-env"
+  #   if: ${{ github.ref == 'refs/heads/master' }}
+  #   steps:
+  #     - name: Running staging deployment
+  #       run: |
+  #         echo Deploying to staging...
+  #         sleep 10s
           
   deploy-to-prod:
     runs-on: ubuntu-latest
