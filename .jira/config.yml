@@ -2,10 +2,9 @@ deployments:
   deploymentGating:
     enabled: true
     retry: 30
-    sleep: 30
+    sleep: 10
     environments: 
     - Development
-    - Production
     - ::::development-ス
     - 111:test_staging-env
   services:
